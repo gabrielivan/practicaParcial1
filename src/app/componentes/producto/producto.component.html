@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+          <div *ngIf="!nuevoProducto">
+              <button class="btn btn-lg btn-warning btn-block"  (click)="hacerNuevoProducto()">Nuevo </button>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="productoContainer" *ngIf="nuevoProducto">
+        <div>
+          <label>Descripcion:
+            <input [(ngModel)]="nuevoProducto.Descripcion" placeholder="Descripcion">
+          </label>
+        </div>
+        <div>
+            <label>Precio:
+              <input [(ngModel)]="nuevoProducto.Precio" placeholder="Precio">
+            </label>
+          </div>
+          <div>
+            <label>Fecha de Vencimiento:
+              <input [(ngModel)]="nuevoProducto.FechaDeVencimiento" placeholder="Fecha de Vencimiento">
+            </label>
+          </div>
+          <div>
+            <label>Ruta de Foto:
+              <input [(ngModel)]="nuevoProducto.RutaDeFoto" placeholder="RutaDeFoto">
+            </label>
+          </div>
+        <div>
+            <label>Tipo:
+              <select [(ngModel)]="nuevoProducto.Tipo">
+                <option value="Liquido">Liquido</option>
+                <option value="Solido">Solido</option>
+              </select>
+              
+            </label>
+          </div>
+
+          <button class="btn btn-lg btn-success btn-block"  (click)="crearProducto()">Crear Producto</button>
+      </div>
+  </div>
+</div>
+  

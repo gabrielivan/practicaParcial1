@@ -1,0 +1,26 @@
+
+  .active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  .active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+  .active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+  }
+
+  .buscador{
+    margin: 10px;
+    width: 25%;
+  }
+
+  .divBuscador{
+    background-color: lightblue;
+    height: 190px;
+    margin: 1%;
+    padding: 10px;
+    padding-left: 25px;
+  }

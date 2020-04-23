@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="divBuscador">
+    <h3>Buscar producto</h3>
+    <div class="md-form active-cyan active-cyan-2 mb-3 buscador">
+        <input class="form-control" [(ngModel)]="descripcion" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    <button class="btn-lg btn-primary" style="width: 15%;" (click)="buscar()">Buscar</button>
+</div>

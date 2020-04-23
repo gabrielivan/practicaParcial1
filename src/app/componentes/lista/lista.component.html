@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>FechaDeVencimiento</th>
+        <th>RutaDeFoto</th>
+        <th>Tipo</th>
+        <th>Mostrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of listadoProductos">
+        <td>{{producto.Id}}</td>
+        <td>{{producto.Descripcion}}</td>
+        <td>{{producto.Precio}}</td>
+        <td>{{producto.FechaDeVencimiento | date}}</td>
+        <td>{{producto.RutaDeFoto}}</td>
+        <td>{{producto.Tipo}}</td>
+        <td app-boton [producto]="producto" (productoSeleccionado)="borrar($event)"></td>
+      </tr>
+     
+    </tbody>
+  </table>

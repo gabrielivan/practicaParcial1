@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div id="content">
+  <article class="post clearfix">
+    <header>
+      <h1 class="post-title"><a href="#">Listado de Productos</a></h1>
+    </header>
+    <hr>
+    <div id="principal">
+      <app-lista [listadoProductos]="ListadoProductosPrincipal"
+        (productoSeleccionado)="borrarProductoSeleccionado($event)"></app-lista>
+    </div>
+  </article>
+</div>
+<hr>
+<section class="widget clearfix">
+  <h3 class="widgettitle">Alta </h3>
+  <div class="informe">
+    <app-producto (SeCreoUnProducto)="mostrarProducto($event)"></app-producto>
+  </div>
+</section>
+<hr>
+<app-buscador [listadoProductos]="ListadoProductosPrincipal" (productoEncontrado)="tomarProductoParaDetalles($event)">
+</app-buscador>
+<hr>
+<section class="widget clearfix">
+  <h3 class="widgettitle">Detalle </h3>
+  <div class="informe">
+    <app-mostrar [unProducto]="productoEncontrado"></app-mostrar>
+  </div>
+</section>
